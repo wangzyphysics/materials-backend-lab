@@ -1,0 +1,18 @@
+[Unit]
+Description=CALYPSO preview platform API
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/wangzy/calypso-preview/materials-backend-lab
+Environment=CALYPSO_ALLOWED_ORIGINS=https://calypso-db-web.wangzy-physics.workers.dev
+Environment=CALYPSO_SECURE_COOKIES=true
+ExecStart=/home/wangzy/.local/calypso-runtime/node-v22.20.0-linux-x64/bin/node --experimental-strip-types src/platform/server.mjs
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target

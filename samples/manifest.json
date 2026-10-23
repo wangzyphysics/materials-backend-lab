@@ -1,0 +1,87 @@
+{
+  "selection_version": 1,
+  "source_directory": "/Users/wangzhenyu/workplace/codex/数据库网站设计/results-0430",
+  "files": {
+    "materials.jsonl": {
+      "original_sha256": "5f28271148fc8d0c73708bcdf6f24465771cdfdb991e38c382ae023c7795163f",
+      "selected_sha256": "d062b80e1716da5b6f9167f621436b1c2f83a5bc427e4d9a4ee94524cf2632f8",
+      "selected_records": 20,
+      "original_bytes": 30575153
+    },
+    "relax.jsonl": {
+      "original_sha256": "82fd5978eee719f2088683aeab1b938180eeb52653c5a53aaade23d87028f9cb",
+      "selected_sha256": "c27de0b20707ae13c13e53af139020b0b1e93d4a25bfa51dab0a3d5b94f51ab5",
+      "selected_records": 11,
+      "original_bytes": 913973374
+    },
+    "static.jsonl": {
+      "original_sha256": "83b8c6fdb644832efec302e0589ebc3b125819e4924a886384959fd267cbf563",
+      "selected_sha256": "83b8c6fdb644832efec302e0589ebc3b125819e4924a886384959fd267cbf563",
+      "selected_records": 9,
+      "original_bytes": 159413
+    },
+    "symmetry.jsonl": {
+      "original_sha256": "99814d15e53ee9e36c789233daed017f42eaef58df9cb21610f1a3678d3b8712",
+      "selected_sha256": "4c76e9f6bbe544af686ed85a6338941875f51c91cc28a107610b74f9930a8777",
+      "selected_records": 20,
+      "original_bytes": 436675056
+    },
+    "synthesizability.jsonl": {
+      "original_sha256": "93388011f939d1221d760d57bbc122cc6543c6a94e1df3e848d44f59d7d4b884",
+      "selected_sha256": "3a12b2b214f44a3398250affafb4e8e73ef45e39dcc4ac54e07be339b344e232",
+      "selected_records": 8,
+      "original_bytes": 22309956
+    }
+  },
+  "selected_external_material_ids": [
+    "caly-259513",
+    "caly-2166457",
+    "caly-280962",
+    "caly-2049",
+    "caly-268650",
+    "caly-1535152",
+    "caly-178162",
+    "caly-1756515",
+    "calc-0000000000AW8S51Z411DBWZQE",
+    "calc-0000000000AQBTSZJWTA5H0FAJ",
+    "calc-0000000000BAKB6GG48S2249HF",
+    "calc-0000000000AHNSP990Y4QZB254",
+    "calc-0000000000AS0R54AX2SZJ8T0E",
+    "calc-0000000000BMTVK0VR471G0KA3",
+    "calc-0000000000BTWSGVXB38GH1957",
+    "calc-0000000000B119WPH3GRWBRH6X",
+    "calc-0000000000AWKTEY6FB6KWYSFK",
+    "calc-0000000000ACWBFBRTTMDWGF35",
+    "calc-0000000000AQEV9KHDWMEYHFAD",
+    "calc-0000000000B8CAGD9RZGKHA9QC"
+  ],
+  "selection": {
+    "predicted_structures": [
+      "caly-259513",
+      "caly-2166457",
+      "caly-280962",
+      "caly-2049",
+      "caly-268650",
+      "caly-1535152",
+      "caly-178162",
+      "caly-1756515"
+    ],
+    "existing_phase_pressure_points": {
+      "15.0": "calc-0000000000AQBTSZJWTA5H0FAJ",
+      "1.0": "calc-0000000000AW8S51Z411DBWZQE",
+      "60.0": "calc-0000000000BAKB6GG48S2249HF"
+    },
+    "materials_with_static": [
+      "calc-0000000000AHNSP990Y4QZB254",
+      "calc-0000000000AS0R54AX2SZJ8T0E",
+      "calc-0000000000BMTVK0VR471G0KA3",
+      "calc-0000000000BTWSGVXB38GH1957",
+      "calc-0000000000B119WPH3GRWBRH6X",
+      "calc-0000000000AWKTEY6FB6KWYSFK",
+      "calc-0000000000ACWBFBRTTMDWGF35",
+      "calc-0000000000AQEV9KHDWMEYHFAD",
+      "calc-0000000000B8CAGD9RZGKHA9QC"
+    ]
+  },
+  "synthetic": false
+}

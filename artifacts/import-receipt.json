@@ -1,0 +1,440 @@
+{
+  "importId": "imp_6ceb9be4-7f39-48db-b0d1-6b811493ad3c",
+  "packageHash": "d41fb4f0aaa1538c9dbfa314983f8c47a2491065d486c67424a52d49c1b8bb73",
+  "sourceId": "legacy-calypso-results-0430",
+  "createdMaterials": 20,
+  "reusedMaterials": 0,
+  "createdCalculations": 48,
+  "reusedCalculations": 0,
+  "mappings": [
+    {
+      "externalMaterialId": "caly-259513",
+      "materialId": "mat_b7967e3a-6881-4754-adaf-6d94fe4598a6",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "relax-bca5651afaa6419f9eb2838a8e83e1d8",
+          "calculationId": "calc_e9b1f092-5893-4742-9b86-6eb3a9f18250",
+          "type": "relax",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "sym-bca5651afaa6419f9eb2838a8e83e1d8",
+          "calculationId": "calc_b4e04d3b-c0f2-4f59-92a8-8582f5092f46",
+          "type": "symmetry",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "synth-bca5651afaa6419f9eb2838a8e83e1d8",
+          "calculationId": "calc_eb91eb80-dd56-4409-b2d8-726e942c224f",
+          "type": "synthesizability",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "caly-2166457",
+      "materialId": "mat_64ca14ff-3665-4a17-b600-7d51f3e9b336",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "relax-dcda2d81d19841a8b1bbdc7aa2d398f2",
+          "calculationId": "calc_580e542f-3821-45db-9047-c044f5d21315",
+          "type": "relax",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "sym-dcda2d81d19841a8b1bbdc7aa2d398f2",
+          "calculationId": "calc_963c5516-9900-4b31-9b51-31d6e72eb33d",
+          "type": "symmetry",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "synth-dcda2d81d19841a8b1bbdc7aa2d398f2",
+          "calculationId": "calc_58a04424-b3e5-499c-8f61-377a4b70c228",
+          "type": "synthesizability",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "caly-280962",
+      "materialId": "mat_9e57a4ec-2f48-4e83-854a-56a58d23cd09",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "relax-cdca53ca3cac4dc29dc895697cb26a05",
+          "calculationId": "calc_fc52cebc-93d1-42ed-9731-255db5120848",
+          "type": "relax",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "sym-cdca53ca3cac4dc29dc895697cb26a05",
+          "calculationId": "calc_2b230b25-9260-4ef8-b947-ef9252e86ef8",
+          "type": "symmetry",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "synth-cdca53ca3cac4dc29dc895697cb26a05",
+          "calculationId": "calc_2a3176db-5da7-4361-9b37-27ad39132bbf",
+          "type": "synthesizability",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "caly-2049",
+      "materialId": "mat_20ac7ccc-27d0-4618-850d-a88948c832e3",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "relax-d68cab5da2ed44348bb9b3c81508a4e4",
+          "calculationId": "calc_b0d790ae-4ccc-43ae-b918-285af834839c",
+          "type": "relax",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "sym-d68cab5da2ed44348bb9b3c81508a4e4",
+          "calculationId": "calc_0e9e6ab3-d81f-41fc-863e-a501a7e4a061",
+          "type": "symmetry",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "synth-d68cab5da2ed44348bb9b3c81508a4e4",
+          "calculationId": "calc_2b94a695-8c42-45d1-91e6-d4f07f6cd62d",
+          "type": "synthesizability",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "caly-268650",
+      "materialId": "mat_48c4272f-00ae-4945-b463-11c9d4dba745",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "relax-5f45b78bb05348b6a8e7cab95892108d",
+          "calculationId": "calc_92b6d16e-eaad-455d-ab5e-08ae283f68f1",
+          "type": "relax",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "sym-5f45b78bb05348b6a8e7cab95892108d",
+          "calculationId": "calc_6c76ddad-f620-44b8-b715-8332ee6dd1a9",
+          "type": "symmetry",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "synth-5f45b78bb05348b6a8e7cab95892108d",
+          "calculationId": "calc_744316bf-e0e3-460f-bafa-53ee55fe41d0",
+          "type": "synthesizability",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "caly-1535152",
+      "materialId": "mat_f88a368d-0986-40d0-a305-ec10e14727c6",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "relax-ad755333fa774723ba17ed155f3e864d",
+          "calculationId": "calc_07f67c3f-28a7-4df2-9242-3bb9037cfec6",
+          "type": "relax",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "sym-ad755333fa774723ba17ed155f3e864d",
+          "calculationId": "calc_a8e8cf90-9e4e-48a0-8c21-9a24e42fe814",
+          "type": "symmetry",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "synth-ad755333fa774723ba17ed155f3e864d",
+          "calculationId": "calc_ce888d84-0b96-42ef-b4a8-46c3146c03bd",
+          "type": "synthesizability",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "caly-178162",
+      "materialId": "mat_0f0a23fe-1206-4367-9e87-7fcc7b01ba8c",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "relax-0663b50fe0384331a71154aa8eefd206",
+          "calculationId": "calc_c5067979-3998-4189-af91-c4f989494550",
+          "type": "relax",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "sym-0663b50fe0384331a71154aa8eefd206",
+          "calculationId": "calc_8a8f0f87-5361-4ee2-8829-2296890c3c70",
+          "type": "symmetry",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "synth-0663b50fe0384331a71154aa8eefd206",
+          "calculationId": "calc_88ae74b5-24f2-4d44-a110-1a1047c2f8db",
+          "type": "synthesizability",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "caly-1756515",
+      "materialId": "mat_b7f6ccfa-a546-4caa-af83-52593a974e13",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "relax-1b8d873debfb40d389809d2287177d2f",
+          "calculationId": "calc_c703834e-aa65-413a-8fa7-15d6e1d65de4",
+          "type": "relax",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "sym-1b8d873debfb40d389809d2287177d2f",
+          "calculationId": "calc_61519efc-c851-4e78-8162-f5a20f09b272",
+          "type": "symmetry",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "synth-1b8d873debfb40d389809d2287177d2f",
+          "calculationId": "calc_123899f4-c750-423a-8f9f-14d320943db9",
+          "type": "synthesizability",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000AW8S51Z411DBWZQE",
+      "materialId": "mat_cfa36b40-e284-473c-9d1b-83cc9b669f11",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8AWAP6ZHQQFHME6XDZEH5",
+          "calculationId": "calc_c8a08605-0779-4271-b522-ff096c7314f6",
+          "type": "relax",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8AWB9SHTNXYB8Y255AXHJ",
+          "calculationId": "calc_ebe9a38e-7e9e-40ff-bf58-62d02899a18a",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000AQBTSZJWTA5H0FAJ",
+      "materialId": "mat_4f306d60-e314-4e46-a7b2-805f45242bbe",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8AW7S8GQ3X0RD0SDK8KQN",
+          "calculationId": "calc_423ab639-aae4-4ca6-9608-68a92bb1c4f9",
+          "type": "relax",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8AW88WC2JY06FM1SPPXDF",
+          "calculationId": "calc_868e1dcd-9d0e-4cf1-8db6-2025a890a390",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000BAKB6GG48S2249HF",
+      "materialId": "mat_bb75e799-6e12-4122-a92a-4b72883e0bf4",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8B66EASNGNX4Y6HTQAEP6",
+          "calculationId": "calc_701e3751-40a8-4b77-9624-e1e9809f3987",
+          "type": "relax",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8B66YCMTD3YG2PC3M4BEJ",
+          "calculationId": "calc_2b4f1a8d-f4d7-4c4a-b5cd-e372ed37b9fb",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000AHNSP990Y4QZB254",
+      "materialId": "mat_0eac1711-0d60-4935-98e0-38daebf13333",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8C0HBNR6A31W9S7ZQW0KM",
+          "calculationId": "calc_625a3fc5-dcf4-403f-9479-aee123feabe6",
+          "type": "static",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8C0Q1133TS092SBQSRTW0",
+          "calculationId": "calc_8c09c35b-2ac2-4e2b-b90c-fecc9e70c881",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000AS0R54AX2SZJ8T0E",
+      "materialId": "mat_c874ef8c-49a0-470c-a634-386c6d3107af",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8C1613R5YF2XZWPGYP0J3",
+          "calculationId": "calc_eb1cb740-43fd-43b2-9724-850dd36233e3",
+          "type": "static",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8C16PQNZCX873CP82305P",
+          "calculationId": "calc_34cc9628-5c87-429a-b23c-6f18629ab451",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000BMTVK0VR471G0KA3",
+      "materialId": "mat_e031ae37-3696-497c-b4b8-43fefc1ceabb",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8C1KQQ31K8S8KK6DWS4D3",
+          "calculationId": "calc_78991a2d-ce74-4278-a2c0-ce5f3c3868db",
+          "type": "static",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8C1M12QD2XB6SKJKHVMSH",
+          "calculationId": "calc_ec57b335-8c4f-4bcf-98b3-6ba7b4ddc2b0",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000BTWSGVXB38GH1957",
+      "materialId": "mat_3145b3bc-a7c5-4b79-b20c-d51cd03ee8eb",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8C1S9432CNK8P40ZAGDBQ",
+          "calculationId": "calc_b82f6e63-53e7-468f-a61b-faf017c67b08",
+          "type": "static",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8C1SKXFV8GWHQYT3F1CMQ",
+          "calculationId": "calc_2922c1cf-1418-4e3c-9a39-6417c9c2e6b1",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000B119WPH3GRWBRH6X",
+      "materialId": "mat_fa29feed-b3dd-4ee2-a15e-7190e20ad9ca",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8C2E4BER29A02QN9M8TCB",
+          "calculationId": "calc_eb03cde5-5289-409d-b38e-48ffd4395bdd",
+          "type": "static",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8C2EE246NNAQ40QQX23V6",
+          "calculationId": "calc_b1f2534d-ecd6-418d-b3df-ba5426b4df20",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000AWKTEY6FB6KWYSFK",
+      "materialId": "mat_b8a4207d-57f9-4b3a-96fd-32980eaf7d60",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8C9P32CAS20G59FEDFQFS",
+          "calculationId": "calc_e9a9c09c-235e-40eb-9541-daa67d462284",
+          "type": "static",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8C9PTX6RWVKHVYMV3ENDD",
+          "calculationId": "calc_4e471b27-4dcc-4181-b2ac-ecb974cd1fd6",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000ACWBFBRTTMDWGF35",
+      "materialId": "mat_200e28ae-3031-48fd-8485-3650797943b6",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8CQSG3KG39VY9DSDZSM1J",
+          "calculationId": "calc_045a8250-a208-47b7-940f-aa59f81d3b1e",
+          "type": "static",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8CQSQ698EQ8VEMZJ0XN8M",
+          "calculationId": "calc_afa75fc7-40f3-401a-ba82-9ec54a533c0f",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000AQEV9KHDWMEYHFAD",
+      "materialId": "mat_7a4cf9bd-5b5c-4290-8ae7-df3d39caf275",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8DPB39HYS7S9SDB34H94A",
+          "calculationId": "calc_c91f73e9-4369-43dc-bd5d-0712317e641a",
+          "type": "static",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8DPBA7Y5XBTXK3ZBR3H0D",
+          "calculationId": "calc_f594e77c-ac37-455d-9526-d7d7e3a0f614",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    },
+    {
+      "externalMaterialId": "calc-0000000000B8CAGD9RZGKHA9QC",
+      "materialId": "mat_f85a10fc-4252-4dd8-9c6d-50a6c8c66930",
+      "action": "created",
+      "tasks": [
+        {
+          "externalTaskId": "01KQE8EKKY9MEP5S8ACQ9NQCAJ",
+          "calculationId": "calc_86adf67e-227e-455a-81c9-66bc916c32a9",
+          "type": "static",
+          "action": "created"
+        },
+        {
+          "externalTaskId": "01KQE8EKMKTWZWYZ2H4QW0WNJA",
+          "calculationId": "calc_f80eb036-b174-4c65-8e0e-66317bd522bd",
+          "type": "symmetry",
+          "action": "created"
+        }
+      ]
+    }
+  ],
+  "replayed": false
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>真实结构 · 本地数据库验证</title>
+<style>
+body{font:15px/1.65 system-ui,sans-serif;color:#21302e;background:#f5f7f6;margin:0}main{max-width:1180px;margin:36px auto;padding:0 24px}h1{font-size:26px;margin:0}h2{font-size:18px;margin:24px 0 12px}.muted{color:#60736d}header,section{background:white;border:1px solid #dbe5e0;border-radius:10px;padding:22px;margin-bottom:18px}select,button{padding:8px;border:1px solid #ccd9d2;border-radius:6px;background:white;font:inherit}select{max-width:100%;width:100%}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:9px 12px;border-bottom:1px solid #e3ebe6;vertical-align:top}th{background:#f5f8f6}code{font-size:12px;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f6f4;padding:12px;font-size:12px}a{color:#246b52}#pressures{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.selected{background:#22664e;color:white}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.state{display:inline-block;background:#edf5ef;border-radius:5px;padding:3px 8px}@media(max-width:800px){.grid{grid-template-columns:1fr}section{overflow:auto}}#error{color:#9b2525}
+</style>
+<main><header><h1>真实结构 · 本地数据库验证</h1><p id="status" class="muted">连接数据库…</p><p>数据来自 results-0430。这里用于核对材料身份、晶胞表示和后补计算；源能量定义尚未核实。</p><label>选择 Material<select id="materials"></select></label><div id="pressures"></div><p id="error"></p></header>
+<section id="identity"></section><div class="grid"><section><h2>展示晶胞</h2><div id="display"></div></section><section><h2>实际计算胞</h2><div id="cells"></div></section></div>
+<section><h2>计算和后补性质</h2><div id="calculations"></div></section><section><h2>来源与旧 ID 映射</h2><div id="sources"></div></section>
+<section><details><summary>查看 API 原始详情 JSON</summary><pre id="raw"></pre></details></section></main>
+<script type="module">
+const element=id=>document.getElementById(id),escape=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const request=async path=>{const response=await fetch('/api/v1/'+path);const data=await response.json();if(!response.ok)throw new Error(data.error);return data;};
+const table=(headers,rows)=>'<table><thead><tr>'+headers.map(h=>'<th>'+escape(h)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(row=>'<tr>'+row.map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')+'</tbody></table>';
+let generation=0;
+async function show(materialId){
+ const current=++generation;element('error').textContent='';
+ try{const {material:m}=await request('materials/'+encodeURIComponent(materialId));if(current!==generation)return;
+ element('materials').value=materialId;history.replaceState(null,'','?material_id='+encodeURIComponent(materialId));
+ element('identity').innerHTML='<h2>'+escape(m.formula)+' · '+escape(m.pressureGPa===null?'压力未报告':m.pressureGPa+' GPa')+'</h2><p><code>'+escape(m.materialId)+'</code></p><p>Phase ID：<code>'+escape(m.phaseId??'未归相')+'</code> · 修订 '+escape(m.revision)+' · '+escape(m.availableProperties.join(', '))+'</p><a href="/api/v1/materials/'+encodeURIComponent(m.materialId)+'" target="_blank">打开详情 API</a>';
+ const display=m.displayStructure;
+ element('display').innerHTML='<p><span class="state">'+display.nsites+' 个原子位点</span> · '+display.volume_a3.toFixed(6)+' Å³</p><p>空间群 '+escape(m.spaceGroup??'未报告')+'</p><pre>'+escape(JSON.stringify(display.geometry_json.lattice,null,2))+'</pre><details><summary>坐标与占位</summary><pre>'+escape(JSON.stringify(display.geometry_json.sites,null,2))+'</pre></details>';
+ element('cells').innerHTML=table(['用途','原子位点','体积 Å³'],m.structures.filter(s=>s.role!=='display_unit_cell').map(s=>[escape(s.role),s.nsites,s.volume_a3.toFixed(6)]));
+ element('calculations').innerHTML=table(['类型 / ID','源运行状态','能量与计算胞','确认状态'],m.calculations.map(c=>[escape(c.type)+'<br><code>'+escape(c.calculation_id)+'</code>',escape(c.run_state),c.result.raw_energy_ev_cell===null?'—':escape(c.result.raw_energy_ev_cell)+' eV / '+escape(c.result.n_atoms_cell)+' 原子位点胞',escape(c.result.energy_definition)]));
+ element('sources').innerHTML=table(['来源','原 Material ID','原材料记录位置 / 元数据原子数'],m.sources.map(s=>[escape(s.source_id),'<code>'+escape(s.external_material_id)+'</code>',escape(s.provenance_json.file)+' 第 '+escape(s.provenance_json.original_line)+' 行 / '+escape(s.metadata_json.nsites)]));
+ element('raw').textContent=JSON.stringify(m,null,2);element('pressures').replaceChildren();
+ if(m.phaseId){const {records}=await request('phases/'+encodeURIComponent(m.phaseId)+'/materials');if(current!==generation)return;
+  for(const record of records){if(record.pressure_gpa===null)continue;const button=document.createElement('button');button.textContent=record.pressure_gpa+' GPa';if(record.material_id===m.materialId)button.className='selected';button.onclick=()=>show(record.material_id);element('pressures').append(button);}}
+ }catch(error){if(current===generation)element('error').textContent=error.message;}
+}
+try{const [health,list]=await Promise.all([request('health'),request('materials')]);
+ element('status').textContent=health.backend+' · '+list.total+' 个真实来源 Material · '+health.version;
+ for(const m of list.items){const option=document.createElement('option');option.value=m.materialId;option.textContent=m.externalIds.join(', ')+' · '+m.formula+' · '+(m.pressureGPa===null?'压力未报告':m.pressureGPa+' GPa');element('materials').append(option);}
+ element('materials').onchange=()=>show(element('materials').value);
+ const requested=new URLSearchParams(location.search).get('material_id');const initial=list.items.find(m=>m.materialId===requested)??list.items.find(m=>m.externalIds.includes('caly-259513'))??list.items[0];if(initial)await show(initial.materialId);
+}catch(error){element('error').textContent=error.message;}
+</script></html>

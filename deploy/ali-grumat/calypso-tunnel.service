@@ -1,0 +1,15 @@
+[Unit]
+Description=CALYPSO temporary Cloudflare API tunnel
+After=network.target calypso-api.service
+Wants=calypso-api.service
+
+[Service]
+Type=simple
+ExecStart=/home/wangzy/.local/bin/cloudflared tunnel --no-autoupdate --protocol http2 --url http://127.0.0.1:8877 --http-host-header localhost
+Restart=on-failure
+RestartSec=10
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target

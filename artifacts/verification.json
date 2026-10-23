@@ -1,0 +1,144 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-12T07:59:17.460Z",
+  "checks": [
+    {
+      "name": "Copied source rows match their preserved checksums",
+      "status": "passed"
+    },
+    {
+      "name": "Native PostgreSQL contains 20 Material identities and 48 real source tasks",
+      "status": "passed"
+    },
+    {
+      "name": "The original 30-site display cell and 15-site calculation cell coexist correctly",
+      "status": "passed"
+    },
+    {
+      "name": "Both legacy final-structure formats are adapted",
+      "status": "passed"
+    },
+    {
+      "name": "Unreported pressure stays null; no thermodynamic energy is invented",
+      "status": "passed"
+    },
+    {
+      "name": "Existing source Phase exposes real pressure points 1, 15 and 60 GPa",
+      "status": "passed"
+    },
+    {
+      "name": "Reimport reuses the same receipt, Material IDs and Calculation IDs",
+      "status": "passed"
+    },
+    {
+      "name": "Concurrent first imports allocate each Material only once",
+      "status": "passed"
+    },
+    {
+      "name": "Nine real static calculations can be added later without changing Material IDs",
+      "status": "passed"
+    },
+    {
+      "name": "A second source with the same known-pressure display geometry reuses Material",
+      "status": "passed"
+    },
+    {
+      "name": "Conflicting source task content is rejected atomically",
+      "status": "passed"
+    },
+    {
+      "name": "Wrong-composition output does not leave a partial calculation",
+      "status": "passed"
+    },
+    {
+      "name": "PostgreSQL rejects another Material’s property selection",
+      "status": "passed"
+    },
+    {
+      "name": "PostgreSQL rejects a calculation-cell atom-count mismatch",
+      "status": "passed"
+    },
+    {
+      "name": "Stored geometry and Material pressure cannot be overwritten",
+      "status": "passed"
+    },
+    {
+      "name": "PostgreSQL → transfer package → SQLite preserves every logical row and ID",
+      "status": "passed"
+    },
+    {
+      "name": "PostgreSQL and SQLite return identical Material detail contracts",
+      "status": "passed"
+    },
+    {
+      "name": "SQLite also enforces property ownership and geometry immutability",
+      "status": "passed"
+    },
+    {
+      "name": "SQLite → transfer package → fresh PostgreSQL preserves the same dataset",
+      "status": "passed"
+    },
+    {
+      "name": "MongoDB document conversion is lossless (no MongoDB server tested)",
+      "status": "passed"
+    },
+    {
+      "name": "Recomputed package checksum cannot hide mismatched structure metadata",
+      "status": "passed"
+    },
+    {
+      "name": "HTTP API reads native PostgreSQL records and serves the inspection page",
+      "status": "passed"
+    }
+  ],
+  "evidence": {
+    "runtime": {
+      "version": "PostgreSQL 18.4 on x86_64-apple-darwin24.6.0, compiled by Apple clang version 17.0.0 (clang-1700.6.3.2), 64-bit",
+      "database": "calypso_lab",
+      "schema": "calypso_lab"
+    },
+    "counts": {
+      "calculation_types": 7,
+      "sources": 1,
+      "phases": 10,
+      "materials": 20,
+      "structures": 40,
+      "material_sources": 20,
+      "methods": 23,
+      "calculations": 48,
+      "calculation_results": 48,
+      "calculation_sources": 48,
+      "property_choices": 48,
+      "import_receipts": 1,
+      "analyses": 0,
+      "analysis_inputs": 0
+    },
+    "cellExample": {
+      "materialId": "mat_b7967e3a-6881-4754-adaf-6d94fe4598a6",
+      "externalId": "caly-259513",
+      "displayNsites": 30,
+      "calculationNsites": 15,
+      "calculationId": "calc_e9b1f092-5893-4742-9b86-6eb3a9f18250",
+      "energyDefinition": "unverified"
+    },
+    "pressurePhaseId": "phase_afb0f12f-6b68-41ed-853f-4f94837bf0c1",
+    "concurrentImport": {
+      "materials": 20,
+      "calculations": 39,
+      "replayedReceipts": 1
+    },
+    "lateStatic": {
+      "createdMaterials": 0,
+      "createdCalculations": 9,
+      "idsUnchanged": true
+    },
+    "mongo": "document_conversion_only"
+  },
+  "dataHash": "d38436bfb723e77da2107e9ace3d7fc6fd5109065df9ff0ca200e4864b96fefd",
+  "limits": [
+    "20 selected source materials, not a production-scale benchmark.",
+    "Physical equivalence matching beyond exact display representation is not implemented.",
+    "Source E definitions/method compatibility are unverified; no scientific enthalpy or hull result was generated.",
+    "MongoDB document conversion was tested without a MongoDB server."
+  ]
+}
